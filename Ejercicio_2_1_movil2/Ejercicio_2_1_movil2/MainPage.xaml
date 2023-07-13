@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:o="clr-namespace:Xam.Forms.VideoPlayer;assembly=Xam.Forms.VideoPlayer"
+             x:Class="Ejercicio_2_1_movil2.MainPage">
+
+    <ContentPage.Content>
+        <StackLayout Spacing="10" Padding="10" VerticalOptions="CenterAndExpand">
+            <Label Text="Grabar Video" FontSize="20" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" />
+
+            <o:VideoPlayer x:Name="videoPlayer" BackgroundColor="Black" VerticalOptions="CenterAndExpand" WidthRequest="100" HeightRequest="250" Margin="0,0,0,10" />
+
+            <StackLayout Spacing="5" Orientation="Vertical">
+                <Button Text="Grabar video" Clicked="OnRecordButtonClicked" BackgroundColor="SteelBlue" TextColor="White" CornerRadius="8" />
+                <Button Text="Salvar" Clicked="OnSaveButtonClicked" BackgroundColor="SteelBlue" TextColor="White" CornerRadius="8" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
