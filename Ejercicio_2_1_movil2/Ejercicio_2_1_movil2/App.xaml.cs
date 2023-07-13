@@ -10,7 +10,7 @@ namespace Ejercicio_2_1_movil2
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

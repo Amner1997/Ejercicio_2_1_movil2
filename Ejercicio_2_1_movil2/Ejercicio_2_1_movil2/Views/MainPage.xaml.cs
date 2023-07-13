@@ -83,8 +83,9 @@ namespace Ejercicio_2_1_movil2
                   // Copiar el archivo de video a la nueva ubicación de almacenamiento
                   File.Copy(videoPath, saveVideoPath);
 
-                  await DisplayAlert("Éxito", "Video guardado correctamente", "OK");
-                 await DisplayAlert("Éxito", "Se guardo en la siguiente ruta" +saveVideoPath, "OK");
+                    await DisplayAlert("Éxito", "Video guardado correctamente", "OK");
+                    await DisplayAlert("Éxito", "Se guardo en la siguiente ruta" +saveVideoPath, "OK");
+                    Console.WriteLine(saveVideoPath);
             }
               catch (Exception ex)
               {
@@ -92,7 +93,12 @@ namespace Ejercicio_2_1_movil2
               }
           }
 
-        
+        private async void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Views.ListaVideos());
+        }
+
+
 
 
         /* private void OnStopButtonClicked(object sender, EventArgs e)

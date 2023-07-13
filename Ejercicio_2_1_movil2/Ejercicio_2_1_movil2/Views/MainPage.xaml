@@ -4,11 +4,15 @@
              xmlns:o="clr-namespace:Xam.Forms.VideoPlayer;assembly=Xam.Forms.VideoPlayer"
              x:Class="Ejercicio_2_1_movil2.MainPage">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Lista de Videos" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <StackLayout Spacing="10" Padding="10" VerticalOptions="CenterAndExpand">
             <Label Text="Grabar Video" FontSize="20" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" />
 
-            <o:VideoPlayer x:Name="videoPlayer" BackgroundColor="Black" VerticalOptions="CenterAndExpand" WidthRequest="100" HeightRequest="250" Margin="0,0,0,10" />
+            <o:VideoPlayer Source="logoPlay.png" x:Name="videoPlayer" BackgroundColor="Black" VerticalOptions="CenterAndExpand" WidthRequest="100" HeightRequest="250" Margin="0,0,0,10" />
 
             <StackLayout Spacing="5" Orientation="Vertical">
                 <Button Text="Grabar video" Clicked="OnRecordButtonClicked" BackgroundColor="SteelBlue" TextColor="White" CornerRadius="8" />
